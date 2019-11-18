@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
+import styled from 'styled-components';
 
 import Layout from '../src/components/Layout';
 
+const TVShowName = styled.h1`
+  color: red;
+  font-style: italic;
+`;
+
 const Index = ({ shows }) => (
   <Layout>
-    <h1>Batman TV Shows</h1>
+    <TVShowName>Batman TV Shows</TVShowName>
     <ul>
       {shows.map((show) => (
         <li key={show.id}>
