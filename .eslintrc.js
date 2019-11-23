@@ -16,7 +16,11 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ["babel-plugin-styled-components"],
+  plugins: [
+    "babel-plugin-styled-components",
+    "eslint-plugin-babel-plugin-styled-components"
+  ],
   rules: {
+    semi: [2, "always"],
   },
 };
