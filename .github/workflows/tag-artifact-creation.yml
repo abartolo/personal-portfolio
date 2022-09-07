@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: 16
 
+      - name: Install Dependencies
+        run: npm ci
+
       - name: Generate Next Prod Build
         run: npm run build
 
