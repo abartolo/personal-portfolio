@@ -27,10 +27,9 @@ jobs:
       - name: Generate Next Prod Build
         run: npm run build
 
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.0.0
+      - name: Create Artifact
+        uses: actions/upload-artifact@v3
         with:
           # Artifact name
           name: ${{github.ref_name}}
-          # # Destination path
-          # path: # optional
+          path: .next
