@@ -32,4 +32,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # TODO: Figure out name
           AWS_REGION: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: '.next'
+          SOURCE_DIR: 'artifact'
