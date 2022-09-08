@@ -15,8 +15,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
+      - name: Create Download path
         run: mkdir ./build
+      - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: tag-artifact-creation.yml
