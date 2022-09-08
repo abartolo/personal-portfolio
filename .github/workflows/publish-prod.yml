@@ -16,12 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
+        run: mkdir ./build
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: tag-artifact-creation.yml
           # name: ${{github.event.inputs.artifact}}
           name: test-v0.0.4-3011905428
-          path: /build
+          path: ./build
 
       - name: Upload files to S3
         uses: jakejarvis/s3-sync-action@master
@@ -33,5 +34,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # TODO: Figure out name
           AWS_REGION: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: /build
+          SOURCE_DIR: ./build
           DEST_DIR: /artifact
