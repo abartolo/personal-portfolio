@@ -17,6 +17,7 @@ jobs:
     steps:
       - name: Create Download path
         run: mkdir ./build
+
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
@@ -35,4 +36,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
           SOURCE_DIR: ./build
-          DEST_DIR: /artifact
+          DEST_DIR: artifact
