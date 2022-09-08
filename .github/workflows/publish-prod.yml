@@ -20,7 +20,6 @@ jobs:
         with:
           workflow: tag-artifact-creation.yml
           name: ${{github.event.inputs.artifact}}
-          path: .next
 
       - name: Upload files to S3
         uses: jakejarvis/s3-sync-action@master
@@ -32,4 +31,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # TODO: Figure out name
           AWS_REGION: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: 'artifact'
+          SOURCE_DIR: '.next'
