@@ -16,13 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact      
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: ${{github.event.inputs.artifact}}
 
       - name: Upload files to S3
-      - uses: jakejarvis/s3-sync-action@master
+        uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
