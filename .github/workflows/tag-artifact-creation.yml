@@ -1,4 +1,4 @@
-name: Tag Artifact Creation
+name: Step 1 - Tag Artifact Creation
 
 # Controls when the workflow will run
 on:  
