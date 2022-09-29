@@ -22,8 +22,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: tag-artifact-creation.yml
-          # name: ${{github.event.inputs.artifact}}
-          name: test-v0.0.4-3011905428
+          name: ${{github.event.inputs.artifact}}
           path: ./build
 
       - name: Upload files to S3
