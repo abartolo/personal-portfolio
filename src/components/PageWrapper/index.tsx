@@ -18,27 +18,25 @@ export const PageWrapper: React.FC<IPropsWithChildrenProps> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>{children}</main>
+      <header className="flex flex-row justify-between items-center p-8">
+        <Image
+          loader={({ src }) => src}
+          src="https://www.readygologos.com/wp-content/uploads/2018/01/AB-1.png"
+          alt="Logo"
+          width={50}
+          height={52}
+        />
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span>
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={72}
-              height={16}
-              loader={({ src }) => {
-                return src;
-              }}
-            />
-          </span>
-        </a>
+        <nav>
+          <a href="/html/">HTML</a> |<a href="/css/">CSS</a> |
+          <a href="/js/">JavaScript</a> |<a href="/jquery/">jQuery</a>
+        </nav>
+      </header>
+
+      <main className="min-h-screen bg-gray-300">{children}</main>
+
+      <footer className="p-8 bg-gray-500 text-white">
+        <p className="text-center"> Designed & Built by Alexander Bartolo</p>
       </footer>
     </div>
   );
