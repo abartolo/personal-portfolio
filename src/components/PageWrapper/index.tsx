@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React, { PropsWithChildren } from "react";
+import { PortfolioNav } from "../nav/PortfolioNav";
 
 interface IPropsWithChildrenProps extends PropsWithChildren {
   title?: string;
@@ -35,20 +36,7 @@ export const PageWrapper: React.FC<IPropsWithChildrenProps> = ({
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
-      <header className="flex flex-row justify-between items-center p-8">
-        <Image
-          loader={({ src }) => src}
-          src="https://www.readygologos.com/wp-content/uploads/2018/01/AB-1.png"
-          alt="Logo"
-          width={50}
-          height={52}
-        />
-
-        <nav>
-          <a href="/html/">HTML</a> |<a href="/css/">CSS</a> |
-          <a href="/js/">JavaScript</a> |<a href="/jquery/">jQuery</a>
-        </nav>
-      </header>
+      <PortfolioNav />
 
       <main className="min-h-screen">{children}</main>
 
