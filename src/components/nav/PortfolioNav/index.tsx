@@ -13,10 +13,6 @@ const links = [
 ];
 
 export const PortfolioNav = () => {
-  const openResume = useCallback(() => {
-    window.open("/pdf/Resume-Alexander-Bartolo.pdf", "_blank");
-  }, []);
-
   return (
     <header className="flex flex-row justify-between items-center p-8">
       <Image
@@ -39,12 +35,6 @@ export const PortfolioNav = () => {
             </a>
           );
         })}
-        <button
-          className="ml-2 p-2 bg-blue-dark hover:bg-orange text-white rounded-md text-md"
-          onClick={openResume}
-        >
-          Resume
-        </button>
       </nav>
     </header>
   );
